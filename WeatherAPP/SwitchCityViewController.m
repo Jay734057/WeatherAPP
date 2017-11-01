@@ -143,6 +143,9 @@
     }
 }
 
-
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self handleGetWeatherButtonPress];
+    return true;
+}
 
 @end

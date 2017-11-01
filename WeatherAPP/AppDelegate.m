@@ -21,8 +21,6 @@
     [_window makeKeyAndVisible];
     _window.rootViewController = [[WeatherViewController alloc]init];
 
-    application.statusBarStyle = UIStatusBarStyleLightContent;
-    
     return YES;
 }
 

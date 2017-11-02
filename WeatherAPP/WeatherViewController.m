@@ -224,9 +224,9 @@
         NSString *latitude = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
         NSString *longitude = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
         
-        NSDictionary *coordinate = @{@"lat" : latitude, @"lon" : longitude, @"appid" : @APP_ID};
+        NSDictionary *coordinate = @{@"lat" : latitude, @"lon" : longitude, @"appid" : APP_ID};
         
-        [self getWeatherDataWithUrl:@WEATHER_URL Parameters:coordinate];
+        [self getWeatherDataWithUrl:WEATHER_URL Parameters:coordinate];
         
     }
 }
@@ -241,8 +241,8 @@
 -(void)customizedWithCityName:(NSString *)city {
     [SVProgressHUD show];
     self.switchedCity = city;
-    NSDictionary *parameters = @{@"q" : city, @"appid" : @APP_ID};
-    [self getWeatherDataWithUrl:@WEATHER_URL Parameters:parameters];
+    NSDictionary *parameters = @{@"q" : city, @"appid" : APP_ID};
+    [self getWeatherDataWithUrl:WEATHER_URL Parameters:parameters];
     [SVProgressHUD dismiss];
 }
 
